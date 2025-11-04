@@ -1,0 +1,10 @@
+management:
+  - task: mapper_task
+    static_mapping: [0,0] # Mapper task is mandatory and requires static mapping
+    management:
+  - task: vol_monitor
+    static_mapping: [0,1]
+
+apps:
+  - name: prod_cons
+  - name: dijkstra

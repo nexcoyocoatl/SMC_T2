@@ -1,0 +1,12 @@
+hw:
+  page_size_inst_KB: 32 # Keep both memories with equal sizes
+  page_size_data_KB: 32
+  tasks_per_PE: 2
+  mpsoc_dimension: [3,3]
+  Peripherals:
+    - name: MA_INJ      # Remember to connect to a border port
+      pe: 0,0
+      port: S
+    - name: APP_INJ     # Remember to connect to a border port
+      pe: 2,2
+      port: N
