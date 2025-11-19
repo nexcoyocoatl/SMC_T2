@@ -302,9 +302,9 @@ int msg_recv_message_delivery(msg_dlv_t *dlv)
     if (llm_has_monitor(MON_VOL) && recv_app != 0)
     {
         llm_vol(
+			(dlv->size + sizeof(msg_dlv_t))/4,
             dlv->hdshk.source,
-            MMR_DMNI_INF_ADDRESS,
-            (dlv->size + sizeof(msg_dlv_t))/4
+            MMR_DMNI_INF_ADDRESS
         );
     }
 
